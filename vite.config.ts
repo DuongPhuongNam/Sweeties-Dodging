@@ -15,8 +15,7 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
-  },
-  // ✅ FIX: Chỉ dùng base path cho production
+  }, 
   base: process.env.NODE_ENV === 'production' 
     ? (process.env.VITE_BASE_PATH || "/Sweeties-Dodging")
     : "/",
