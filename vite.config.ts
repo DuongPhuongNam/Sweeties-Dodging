@@ -15,7 +15,14 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
-  }, 
+  
+    target: 'esnext',
+    minify: 'esbuild',
+  },
+
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
   base: process.env.NODE_ENV === 'production' 
     ? (process.env.VITE_BASE_PATH || "/Sweeties-Dodging")
     : "/",
