@@ -8,5 +8,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base : process.env.VITE_BASE_PATH || "/Sweeties-Dodging",
+  base: process.env.VITE_BASE_PATH || "/Sweeties-Dodging",
 });
