@@ -8,8 +8,13 @@ function App() {
     defaultOptions: { queries: { refetchOnWindowFocus: false } },
   });
 
+  // FIX: Đồng bộ basename với Vite base path
+  const basename = process.env.NODE_ENV === 'production' 
+    ? (import.meta.env.VITE_BASE_PATH || "/Sweeties-Dodging")
+    : "/";
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AntApp component={false}>
         <ConfigProvider
           tag={{ className: "text-[14px] font-semibold py-1 px-2" }}

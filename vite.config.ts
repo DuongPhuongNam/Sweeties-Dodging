@@ -8,5 +8,8 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base: process.env.VITE_BASE_PATH || "/Sweeties-Dodging",
+  // FIX: Chỉ dùng base path cho production
+  base: process.env.NODE_ENV === 'production' 
+    ? (process.env.VITE_BASE_PATH || "/Sweeties-Dodging")
+    : "/",
 });
