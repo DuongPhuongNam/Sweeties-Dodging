@@ -1,9 +1,4 @@
-{
-  "functions": {
-    "app/[[...route]].tsx": {
-      "includeFiles": "dist/**"
-    }
-  },
+{ 
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
@@ -14,4 +9,4 @@
       "destination": "/index.html"
     }
   ]
-}
+} 
